@@ -24,7 +24,7 @@ Re-evaluating the Sun–Liu alliance in the Battle of Red Cliffs (Chapters 43–
 
 - **`data/red_cliffs_with_locations.csv`** — Dyadic interactions with location, weight, sentiment, chapter (Map 1 and summaries).
 - **`data/RedCliffs_Centrality_Findings.csv`** — Node-level degree and eigenvector scores (from network script).
-- **`data/Nodes_table_Red_Cliffs.csv`**, **`data/Edges_table_Red_Cliffs.csv`** — Node/edge tables for the tidygraph network (required for `network_analysis_red_cliffs.R`).
+- **`Nodes_table_Red_Cliffs.csv`**, **`Edges_table_Red_Cliffs.csv`** — Node/edge tables for `RedCliffs_network_code.R` (place in the working directory when you run the script, or copy into `data/` and `setwd("data")` before sourcing).
 - **`data/Location.geojson`** — Canonical place anchors (Chaisang, RedCliffs, Xiakou, etc.).
 - **`data/Location_updated.geojson`** — Anchors for proxy coordinate offsets (Map 1).
 - **`data/LuSu_move_location.geojson`** — Lu Su waypoint sequence.
@@ -38,7 +38,7 @@ Run from the **repository root** (`cd HUMA_1678`).
 
 | Script | Purpose | Main output |
 |--------|---------|-------------|
-| `scripts/network_analysis_red_cliffs.R` | Person–person network, centrality table, network figure | `network_graph_red_cliffs.png`, `data/RedCliffs_Centrality_Findings.csv` |
+| `scripts/RedCliffs_network_code.R` | Person–person network and centrality export (your original script; run with CSVs in working directory) | `RedCliffs_Centrality_Findings.csv` in `getwd()` |
 | `scripts/map1_interaction_weighted_points.R` | Map 1: weighted points by location | `map1_interaction_weighted_points.png` |
 | `scripts/map2_route_reconstruction.R` | Route reconstruction preview (base R `sf`) | optional `marked_points_map.png` |
 | `scripts/map3_timeline_routes.R` | Map 3: timeline routes (`ggplot2`) | `map3_timeline_routes.png` |
@@ -54,7 +54,8 @@ Run from the **repository root** (`cd HUMA_1678`).
 git clone https://github.com/nhatminh37/HUMA_1678.git
 cd HUMA_1678
 
-Rscript scripts/network_analysis_red_cliffs.R
+# Put Nodes_table_Red_Cliffs.csv and Edges_table_Red_Cliffs.csv in repo root, then:
+Rscript scripts/RedCliffs_network_code.R
 Rscript scripts/map1_interaction_weighted_points.R
 Rscript scripts/map3_timeline_routes.R
 ```
