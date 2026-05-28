@@ -1,3 +1,7 @@
+# Map 3: chapter-ordered timeline routes (ggplot2 + sf)
+# Run from repository root:  Rscript scripts/map3_timeline_routes.R
+# Output: map3_timeline_routes.png (repo root)
+
 required_pkgs <- c("sf", "ggplot2", "ggrepel", "ggspatial")
 missing_pkgs <- required_pkgs[!vapply(required_pkgs, requireNamespace, logical(1), quietly = TRUE)]
 if (length(missing_pkgs)) {
@@ -338,7 +342,7 @@ p <- ggplot() +
     legend.title      = element_text(face="bold")
   )
 
-out_file <- "timeline_red_cliffs_professional.png"
+out_file <- "map3_timeline_routes.png"
 ggsave(out_file, p, width=16, height=9, dpi=300, bg="white")
 message("Saved: ", normalizePath(out_file, mustWork=FALSE))
 message(dist_text)

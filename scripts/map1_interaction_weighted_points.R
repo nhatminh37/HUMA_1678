@@ -1,6 +1,7 @@
 ###############################################################################
-# Red Cliffs DH / HNA / Spatial Humanities analysis
-# Refreshed analysis + visualization workflow
+# Map 1: weighted interaction points by location (ggplot2 + sf)
+# Run from repository root:  Rscript scripts/map1_interaction_weighted_points.R
+# Output: map1_interaction_weighted_points.png (repo root)
 ###############################################################################
 
 required_pkgs <- c(
@@ -31,8 +32,11 @@ focal_chars <- c("Lu Su", "Zhuge Liang", "Zhou Yu")
 # ---------------------------
 # 1. Load data
 # ---------------------------
-df <- read_csv("data/red_cliffs_with_locations.csv", show_col_types = FALSE)
-loc_sf <- st_read("data/Location_updated.geojson", quiet = TRUE)
+repo_root <- if (dir.exists("data")) normalizePath(".") else normalizePath("..")
+data_dir <- file.path(repo_root, "data")
+
+df <- read_csv(file.path(data_dir, "red_cliffs_with_locations.csv"), show_col_types = FALSE)
+loc_sf <- st_read(file.path(data_dir, "Location_updated.geojson"), quiet = TRUE)
 names(loc_sf)[names(loc_sf) == "point"] <- "place"
 
 # ---------------------------
@@ -581,7 +585,10 @@ p_map <- ggplot() +
     legend.title = element_text(face = "bold")
   )
 
-ggsave("red_cliffs_spatial_proxy_map.png", p_map, width = 16, height = 10.5, dpi = 320, bg = "white")
+ggsave(
+  file.path(repo_root, "map1_interaction_weighted_points.png"),
+  p_map, width = 16, height = 10.5, dpi = 320, bg = "white"
+)
 
 # ---------------------------
 # 8. Console summary

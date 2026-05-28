@@ -2,9 +2,9 @@
 
 Re-evaluating the Sun–Liu alliance in the Battle of Red Cliffs (Chapters 43–50) using network analysis and spatial GIS methods on *Romance of the Three Kingdoms* (Moss Roberts translation).
 
-**Paper source:** `main.tex` + `references.bib` → compile with `pdflatex`/`biber` or `latexmk -pdf -bibtex main.tex`.
-
 **Repository:** [https://github.com/nhatminh37/HUMA_1678](https://github.com/nhatminh37/HUMA_1678)
+
+The LaTeX report (`main.tex`, `references.bib`) is kept locally for submission; this repo holds **data, R scripts, and figure outputs** only.
 
 ---
 
@@ -12,82 +12,68 @@ Re-evaluating the Sun–Liu alliance in the Battle of Red Cliffs (Chapters 43–
 
 | Path | Description |
 |------|-------------|
-| `main.tex`, `references.bib` | LaTeX report and bibliography |
-| `*.png` (root) | Figures embedded in the paper |
+| `network_graph_red_cliffs.png` | Person–person network (ggraph / stress layout) |
+| `map1_interaction_weighted_points.png` | Map 1: interaction activity by location |
+| `map2_qgis_routes.png` | Map 2: route reconstruction (QGIS export) |
+| `map3_timeline_routes.png` | Map 3: chapter-ordered timeline routes |
 | `data/` | Interaction CSV, centrality export, GeoJSON anchors |
 | `data/shapefiles/` | Route and area layers for QGIS / R (`sf`) |
-| `scripts/` | R (and optional Python) analysis pipelines |
-
----
-
-## Figures (paper)
-
-| File | Map / output |
-|------|----------------|
-| `RedCliffs_Network_graph.png` | Person–person network (ggraph) |
-| `red_cliffs_spatial_proxy_map.png` | Map 1: interaction / activity points |
-| `Layout 3.png` | Map 2: route reconstruction (QGIS export) |
-| `timeline_red_cliffs_professional.png` | Map 3: chapter-ordered timeline routes |
+| `scripts/` | R analysis pipelines |
 
 ---
 
 ## Data
 
-- **`data/red_cliffs_with_locations.csv`** — Dyadic interactions with location, weight, sentiment, chapter (primary analysis table).
-- **`data/RedCliffs_Centrality_Findings.csv`** — Node-level degree and eigenvector scores.
+- **`data/red_cliffs_with_locations.csv`** — Dyadic interactions with location, weight, sentiment, chapter (Map 1 and summaries).
+- **`data/RedCliffs_Centrality_Findings.csv`** — Node-level degree and eigenvector scores (from network script).
+- **`data/Nodes_table_Red_Cliffs.csv`**, **`data/Edges_table_Red_Cliffs.csv`** — Node/edge tables for the tidygraph network (required for `network_analysis_red_cliffs.R`).
 - **`data/Location.geojson`** — Canonical place anchors (Chaisang, RedCliffs, Xiakou, etc.).
 - **`data/Location_updated.geojson`** — Anchors for proxy coordinate offsets (Map 1).
 - **`data/LuSu_move_location.geojson`** — Lu Su waypoint sequence.
 - **`data/shapefiles/`** — `LuSu_path`, `LuSu_area`, `ZhouYu_path`, `ZhugeLiang_path`, `Marked_point` (`.shp` + sidecars).
 
-The LaTeX pseudocode for the network section references `Nodes_table_Red_Cliffs.csv` and `Edges_table_Red_Cliffs.csv`; those are the tidygraph node/edge tables used when building the network figure. Export them from your graph object if you regenerate the network from `red_cliffs_with_locations.csv`.
-
 ---
 
 ## Scripts
 
-Run from the **repository root** (paths are relative to root).
+Run from the **repository root** (`cd HUMA_1678`).
 
 | Script | Purpose | Main output |
 |--------|---------|-------------|
-| `scripts/red_cliffs_centrality_analysis.R` | Centrality, sentiment, **Map 1** interaction map | `red_cliffs_spatial_proxy_map.png` |
-| `scripts/loading_example.R` | Route reconstruction (base R `sf`) | `marked_points_map.png` (optional) |
-| `scripts/new_example.R` | **Map 3** timeline with `ggplot2` + `geom_curve` | `timeline_red_cliffs_professional.png` |
-| `scripts/codex_example.R` | Centrality / sentiment summaries (no maps) | `centrality_comparison.png`, etc. |
-| `scripts/map.py` | Alternate timeline plot (matplotlib) | — |
+| `scripts/network_analysis_red_cliffs.R` | Person–person network, centrality table, network figure | `network_graph_red_cliffs.png`, `data/RedCliffs_Centrality_Findings.csv` |
+| `scripts/map1_interaction_weighted_points.R` | Map 1: weighted points by location | `map1_interaction_weighted_points.png` |
+| `scripts/map2_route_reconstruction.R` | Route reconstruction preview (base R `sf`) | optional `marked_points_map.png` |
+| `scripts/map3_timeline_routes.R` | Map 3: timeline routes (`ggplot2`) | `map3_timeline_routes.png` |
+| `scripts/codex_example.R` | Supplementary centrality / sentiment charts | `centrality_comparison.png`, etc. |
 
 ### R packages (typical)
 
-`tidyverse`, `tidygraph`, `igraph`, `ggraph`, `ggrepel`, `sf`, `ggplot2`, `ggspatial` (timeline map)
+`tidyverse`, `tidygraph`, `igraph`, `ggraph`, `ggrepel`, `sf`, `ggplot2`, `ggspatial` (Map 3)
 
 ### Quick start
 
 ```bash
-# Clone
 git clone https://github.com/nhatminh37/HUMA_1678.git
 cd HUMA_1678
 
-# Regenerate spatial / network outputs (requires R + packages)
-Rscript scripts/red_cliffs_centrality_analysis.R
-Rscript scripts/new_example.R
-
-# Build PDF
-latexmk -pdf -bibtex main.tex
+Rscript scripts/network_analysis_red_cliffs.R
+Rscript scripts/map1_interaction_weighted_points.R
+Rscript scripts/map3_timeline_routes.R
 ```
 
-Copy generated PNGs to the repo root if paths in `main.tex` should match (figure filenames are already set at root).
+Copy regenerated PNGs to the repo root if you change output paths. Map 2 (`map2_qgis_routes.png`) is exported from QGIS using layers under `data/`.
 
 ---
 
-## QGIS
+## QGIS (Map 2)
 
-Map 2 (`Layout 3.png`) was exported from a QGIS project using the same GeoJSON/shapefile layers under `data/`. Open `data/Location.geojson` and character path shapefiles as layers; see Methods §3.2 in `main.tex`.
+Open `data/Location.geojson` and character path shapefiles; export the layout as `map2_qgis_routes.png` at the repo root.
 
 ---
 
 ## Citation
 
-If you use this repository, cite the report and the underlying sources listed in `references.bib` (Moretti, Painter et al., Zhang et al., Murrieta-Flores et al., Roberts translation of Luo Guanzhong, etc.).
+If you use this repository, cite the HUMA 1678 report and the sources listed in your bibliography (Moretti, Painter et al., Zhang et al., Murrieta-Flores et al., Roberts translation of Luo Guanzhong, etc.).
 
 ---
 

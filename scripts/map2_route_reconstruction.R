@@ -1,4 +1,7 @@
-# Visualize Location.geojson + Lu Su waypoints + optional shapefiles (sf)
+# Map 2: route reconstruction (sf base plot; optional marked_points_map.png)
+# Run from repository root:  Rscript scripts/map2_route_reconstruction.R
+# Map 2 figure in paper (map2_qgis_routes.png) is exported from QGIS using data/ layers.
+
 # Run from this folder:  setwd(".../Huma 1678")  or source with full paths
 #
 # Lu Su routes (orange):
