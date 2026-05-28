@@ -4,8 +4,6 @@ Re-evaluating the Sun–Liu alliance in the Battle of Red Cliffs (Chapters 43–
 
 **Repository:** [https://github.com/nhatminh37/HUMA_1678](https://github.com/nhatminh37/HUMA_1678)
 
-The LaTeX report (`main.tex`, `references.bib`) is kept locally for submission; this repo holds **data, R scripts, and figure outputs** only.
-
 ---
 
 ## Repository layout
