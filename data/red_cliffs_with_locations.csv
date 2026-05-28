@@ -1,0 +1,58 @@
+Person_A,Alliance_A,Person_B,Alliance_B,Weight,Sentiment,Chapter,Description,Location_Name,Location_Type,Territory,Setting
+Han Dang,Wu,Huang Gai,Wu,0.5,1,50,"Includes: Social","Yangtze River (Red Cliffs, Han Dang's ship)",River / Vessel,Neutral / River,Water
+Jiang Gan,Wei,Pang Tong,Neutral,0.5,1,47,"Includes: Social",Western Hills (mountain hut),Wilderness,Neutral,Outdoor
+Cai brothers,Wei,Gan Ning,Wu,1,-1,50,"Includes: Conflict","Black Forest, north bank",Military Camp,Wei,Outdoor
+Cao Cao,Wei,Liu Fu,Wei,1,-1,48,"Includes: Conflict",Yangtze River (Cao Cao's flagship),River / Vessel,Wei,Water
+Cao Cao,Wei,Cao Ren,Wei,1,1,50,"Includes: Command",Jiangling (city fortress),City / Fortress,Wei,Indoor
+Huang Gai,Wu,Zhang Liao,Wei,1,-1,49,"Includes: Conflict",Yangtze River (Red Cliffs battle),River / Open Water,Neutral / River,Water
+Liu Bei,Shu,Mi Zhu,Shu,1,1,45,"Includes: Command",Fankou (Liu Bei's camp),Military Camp,Shu,Outdoor
+Xu Sheng,Wu,Zhao Zilong,Shu,1,-1,49,"Includes: Conflict",Yangtze River (pursuit from altar),River / Open Water,Neutral / River,Water
+Gan Ning,Wu,Zhou Yu,Wu,1.2,1,46,"Includes: Persuasion","Wu naval camp, Three Gorges",Military Camp,Wu,Outdoor
+Gu Yong,Wu,Sun Quan,Wu,1.2,-1,43,"Includes: Persuasion",Chaisang (council chamber),Council Hall,Wu,Indoor
+Huang Gai,Wu,Zhuge Liang,Shu,1.2,1,43,"Includes: Persuasion",Chaisang (assembly hall),Council Hall,Wu,Indoor
+Huang Gai,Wu,Wu Scholars,Wu,1.2,-1,43,"Includes: Persuasion",Chaisang (assembly hall),Council Hall,Wu,Indoor
+Lady Wu,Wu,Sun Quan,Wu,1.2,1,43,"Includes: Persuasion",Chaisang (private apartments),Private Quarters,Wu,Indoor
+Cai brothers,Wei,Zhou Yu,Wu,1.5,-1,46,"Includes: Deception","Wu naval camp, Three Gorges",Military Camp,Wu,Outdoor
+Cao Cao,Wei,Cheng Yu,Wei,1.5,1,48,"Includes: Strategic","Cao Cao's camp, north bank",Military Camp,Wei,Outdoor
+Cao Cao,Wei,Xu Shu,Wei,1.5,-1,48,"Includes: Deception","Cao Cao's camp, north bank",Military Camp,Wei,Outdoor
+Gan Ning,Wu,Kan Ze,Wu,1.5,1,47,"Includes: Deception",Wu naval camp (Gan Ning's quarters),Military Quarters,Wu,Indoor
+Huang Gai,Wu,Kan Ze,Wu,1.5,1,46,"Includes: Strategic",Wu naval camp (Huang Gai's tent),Military Quarters,Wu,Indoor
+Lu Meng,Wu,Zhou Yu,Wu,1.5,1,44,"Includes: Strategic",Chaisang (Zhou Yu's quarters),Military Quarters,Wu,Indoor
+Lu Su,Wu,Pang Tong,Neutral,1.5,1,47,"Includes: Strategic","Wu naval camp, Three Gorges",Military Camp,Wu,Outdoor
+Pang Tong,Neutral,Xu Shu,Wei,1.5,1,48,"Includes: Strategic","Cao Cao's camp, north bank (waterfront)",Military Camp,Wei,Outdoor
+Cheng Pu,Wu,Zhou Yu,Wu,1.7,1,44,"Includes: Persuasion, Social",Chaisang (Zhou Yu's quarters),Military Quarters,Wu,Indoor
+Bu Zhi,Wu,Zhuge Liang,Shu,2,-1,43,"Includes: Conflict",Chaisang (assembly hall),Council Hall,Wu,Indoor
+Cai Mao,Wei,Cao Cao,Wei,2,-1,45,"Includes: Conflict","Cao Cao's camp, north bank",Military Camp,Wei,Outdoor
+Cao Cao,Wei,Sun Quan,Wu,2,-1,43,"Includes: Diplomatic",Cross-faction (letter: Jiangling to Chaisang),Diplomatic Correspondence,Wei to Wu,N/A
+Cao Cao,Wei,Zhou Yu,Wu,2,-1,45,"Includes: Diplomatic",Cross-faction (letter: north bank to Three Gorges),Diplomatic Correspondence,Wei to Wu,N/A
+Cao Cao,Wei,Pang Tong,Neutral,2,0,47,"Includes: Deception, Social","Cao Cao's camp, north bank",Military Camp,Wei,Outdoor
+Cheng Deshu,Wu,Zhuge Liang,Shu,2,-1,43,"Includes: Conflict",Chaisang (assembly hall),Council Hall,Wu,Indoor
+Liu Bei,Shu,Zhou Yu,Wu,2,-1,45,"Includes: Deception, Social",Wu naval camp (Zhou Yu's tent),Military Quarters,Wu,Indoor
+Lu Ji,Wu,Zhuge Liang,Shu,2,-1,43,"Includes: Conflict",Chaisang (assembly hall),Council Hall,Wu,Indoor
+Mi Zhu,Shu,Zhou Yu,Wu,2,1,45,"Includes: Diplomatic",Wu naval camp (Zhou Yu's tent),Military Quarters,Wu,Indoor
+Xue Zong,Wu,Zhuge Liang,Shu,2,-1,43,"Includes: Conflict",Chaisang (assembly hall),Council Hall,Wu,Indoor
+Yan Jun,Wu,Zhuge Liang,Shu,2,-1,43,"Includes: Conflict",Chaisang (assembly hall),Council Hall,Wu,Indoor
+Yu Fan,Wu,Zhuge Liang,Shu,2,-1,43,"Includes: Conflict",Chaisang (assembly hall),Council Hall,Wu,Indoor
+Zhang Zhao,Wu,Zhuge Liang,Shu,2,-1,43,"Includes: Conflict",Chaisang (assembly hall),Council Hall,Wu,Indoor
+Cao Cao,Wei,Guan Yu,Shu,2.2,1,50,"Includes: Conflict, Persuasion",Huarong Road (mountain pass),Road / Pass,Neutral,Outdoor
+Guan Yu,Shu,Liu Bei,Shu,2.2,1,45,"Includes: Command, Persuasion",Fankou (Liu Bei's camp),Military Camp,Shu,Outdoor
+Cao Cao,Wei,Kan Ze,Wu,2.5,-1,47,"Includes: Conflict, Deception","Cao Cao's camp, north bank",Military Camp,Wei,Outdoor
+Cao Cao,Wei,Zhuge Liang,Shu,2.5,-1,46,"Includes: Conflict, Deception",Yangtze River (fog arrow operation),River / Open Water,Neutral / River,Water
+Cao Cao,Wei,Huang Gai,Wu,2.5,-1,49,"Includes: Conflict, Deception",Yangtze River (Red Cliffs battle),River / Open Water,Neutral / River,Water
+Liu Bei,Shu,Zhuge Liang,Shu,2.5,1,45,"Includes: Command, Strategic",Fankou / Wu naval camp riverbank,Military Camp,Shu,Outdoor
+Zhuge Jin,Wu,Zhuge Liang,Shu,2.9,1,43,"Includes: Persuasion, Social",Chaisang (guest-house),Guest Quarters,Wu,Indoor
+Cai brothers,Wei,Cao Cao,Wei,3,1,46,"Includes: Deception",Cross-faction (letter: Wu camp to north bank),Diplomatic Correspondence,Wu to Wei,N/A
+Cao Cao,Wei,Jiang Gan,Wei,3,1,45,"Includes: Command, Diplomatic","Cao Cao's camp, north bank",Military Camp,Wei,Outdoor
+Guan Yu,Shu,Zhuge Liang,Shu,3,-0.33,49,"Includes: Command, Conflict",Fankou (Liu Bei's camp),Military Camp,Shu,Outdoor
+Jiang Gan,Wei,Zhou Yu,Wu,3.5,0,45,"Includes: Deception, Diplomatic",Wu naval camp (Zhou Yu's tent),Military Quarters,Wu,Indoor
+Sun Quan,Wu,Zhang Zhao,Wu,3.6,-1,43,"Includes: Persuasion",Chaisang (council chamber),Council Hall,Wu,Indoor
+Zhang Zhao,Wu,Zhou Yu,Wu,3.7,-0.67,44,"Includes: Conflict, Deception, Persuasion",Chaisang (Zhou Yu's quarters),Military Quarters,Wu,Indoor
+Huang Gai,Wu,Zhou Yu,Wu,4,0.33,46,"Includes: Command, Deception, Strategic",Wu naval camp (Zhou Yu's tent),Military Quarters,Wu,Indoor
+Sun Quan,Wu,Zhou Yu,Wu,4,1,44,"Includes: Command, Strategic",Chaisang (palace council chamber),Council Hall,Wu,Indoor
+Cao Cao,Wei,Xun You,Wei,4.2,1,46,"Includes: Persuasion, Strategic","Cao Cao's camp, north bank",Military Camp,Wei,Outdoor
+Zhou Yu,Wu,Zhuge Jin,Wu,4.5,0.67,44,"Includes: Command, Diplomatic, Strategic",Chaisang (Zhou Yu's quarters),Military Quarters,Wu,Indoor
+Lu Su,Wu,Sun Quan,Wu,7.4,1,43,"Includes: Command, Persuasion, Strategic",Chaisang (council chamber / private walk),Council Hall,Wu,Indoor
+Sun Quan,Wu,Zhuge Liang,Shu,7.5,0.75,43,"Includes: Diplomatic, Strategic",Chaisang (audience chamber),Council Hall,Wu,Indoor
+Zhou Yu,Wu,Zhuge Liang,Shu,12.5,0.11,44,"Includes: Command, Conflict, Deception, Strategic",Chaisang (Zhou Yu's quarters → audience chamber),Military Quarters,Wu,Indoor
+Lu Su,Wu,Zhuge Liang,Shu,16.2,0.71,43,"Includes: Conflict, Deception, Diplomatic, Persuasion, Social, Strategic","Chaisang (boat, assembly hall, guest-house)",Council Hall,Wu,Indoor
+Lu Su,Wu,Zhou Yu,Wu,17.2,0.64,44,"Includes: Command, Deception, Persuasion, Social, Strategic",Chaisang (Zhou Yu's quarters → palace),Military Quarters,Wu,Indoor

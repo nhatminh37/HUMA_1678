@@ -1,0 +1,13 @@
+{
+"type": "FeatureCollection",
+"name": "Location",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "id": null, "point": "Chaisang" }, "geometry": { "type": "Point", "coordinates": [ 115.459987944344036, 29.888042762215417 ] } },
+{ "type": "Feature", "properties": { "id": null, "point": "Fankou" }, "geometry": { "type": "Point", "coordinates": [ 114.454710931033517, 30.550506416148156 ] } },
+{ "type": "Feature", "properties": { "id": null, "point": "Xiakou" }, "geometry": { "type": "Point", "coordinates": [ 113.977551795683368, 30.661689127297706 ] } },
+{ "type": "Feature", "properties": { "id": null, "point": "RedCliffs" }, "geometry": { "type": "Point", "coordinates": [ 113.509657886262332, 29.901940601109111 ] } },
+{ "type": "Feature", "properties": { "id": null, "point": "Nanping_mountain" }, "geometry": { "type": "Point", "coordinates": [ 113.47722959551038, 29.846349245534334 ] } },
+{ "type": "Feature", "properties": { "id": null, "point": "Poyang_lake" }, "geometry": { "type": "Point", "coordinates": [ 116.039064564914611, 29.489638047262858 ] } }
+]
+}
